@@ -1,0 +1,29 @@
+name: morse_app
+description: "A Flutter app for translating Morse code."
+publish_to: 'none' # Esto evita la publicación accidental en pub.dev
+
+# Versión y número de compilación
+version: 1.0.0+1
+
+# Entorno SDK requerido
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0 # Dependencia para manejar peticiones HTTP
+  cupertino_icons: ^1.0.8 # Íconos estilo iOS
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0 # Reglas de buenas prácticas para tu código
+
+# Configuración específica de Flutter
+flutter:
+  uses-material-design: true
+
+  # Puedes agregar recursos como imágenes o fuentes aquí si es necesario
+  # assets:
+  #   - assets/images/your_image.png
