@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ui.dart';
+import 'home_screen.dart'; // Importa la nueva página de inicio
 
 void main() => runApp(const MorseApp());
 
@@ -11,7 +12,12 @@ class MorseApp extends StatelessWidget {
     return MaterialApp(
       title: 'Morse Translator',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MorseConverterScreen(),
+      initialRoute: '/', // Ruta inicial
+      routes: {
+        '/': (context) => const HomeScreen(), // Página de inicio
+        '/morse': (context) =>
+            const MorseConverterScreen(), // Página del convertidor
+      },
     );
   }
 }
