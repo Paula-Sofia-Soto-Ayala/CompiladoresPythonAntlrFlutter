@@ -11,7 +11,9 @@ class ApiService {
       final response = await http.post(
         Uri.parse(baseUrl),
         headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({'sentence': morseCode}), // Código morse en el body
+        body: jsonEncode({
+          'sentence': morseCode
+        }), // El campo "sentence" se agrega automáticamente
       );
 
       // Verificar la respuesta
